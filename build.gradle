@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'edu.alsjava.performance'
+version '0.0.0.1'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+ext {
+    junit_jupiter_version = '5.5.2'
+}
+
+dependencies {
+    // Test
+    testImplementation "org.junit.jupiter:junit-jupiter:$junit_jupiter_version"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junit_jupiter_version"
+}
+
+test {
+    useJUnitPlatform()
+}
